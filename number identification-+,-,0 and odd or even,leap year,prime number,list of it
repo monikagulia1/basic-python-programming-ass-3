@@ -1,0 +1,81 @@
+1. Write a Python Program to Check if a Number is Positive, Negative or Zero?
+2. Write a Python Program to Check if a Number is Odd or Even?
+3. Write a Python Program to Check Leap Year?
+4. Write a Python Program to Check Prime Number?
+5. Write a Python Program to Print all Prime Numbers in an Interval of 1-10000?
+
+answers-
+Certainly! Here are Python programs to address each of the given tasks:
+
+1. Python Program to Check if a Number is Positive, Negative, or Zero:
+```python
+number = float(input("Enter a number: "))
+
+if number > 0:
+    print("Positive")
+elif number < 0:
+    print("Negative")
+else:
+    print("Zero")
+```
+
+2. Python Program to Check if a Number is Odd or Even:
+```python
+number = int(input("Enter a number: "))
+
+if number % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+```
+
+3. Python Program to Check Leap Year:
+```python
+year = int(input("Enter a year: "))
+
+if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0):
+    print("Leap Year")
+else:
+    print("Not a Leap Year")
+```
+
+4. Python Program to Check Prime Number:
+```python
+number = int(input("Enter a number: "))
+
+is_prime = True
+
+if number <= 1:
+    is_prime = False
+else:
+    for i in range(2, int(number/2) + 1):
+        if number % i == 0:
+            is_prime = False
+            break
+
+if is_prime:
+    print("Prime Number")
+else:
+    print("Not a Prime Number")
+```
+
+5. Python Program to Print all Prime Numbers in an Interval of 1-10000:
+```python
+lower = 1
+upper = 10000
+
+print("Prime numbers between", lower, "and", upper, "are:")
+
+for num in range(lower, upper + 1):
+    if num > 1:
+        is_prime = True
+        for i in range(2, int(num/2) + 1):
+            if num % i == 0:
+                is_prime = False
+                break
+        if is_prime:
+            print(num)
+```
+
+In the last program, we iterate through numbers from `lower` to `upper` using a `for` loop. For each number, we check if it is prime by dividing it by numbers from 2 to half of the number. 
+If it is not divisible by any of those numbers, it is considered prime and printed.
